@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="heading">
+          <div class="heading-line1">
+            <img src="calculator-solid-full.svg" alt="Calculator Logo" />
+            <h2>Tip Calculator</h2>
+          </div>
+          <p>Calculate tips and split bills easily</p>
+        </div>
+      </header>
+
+      <main>
+        <section id="bill-amount-section">
+          <h3><span id="dolar-icon">$</span> Bill Amount</h3>
+          <label for="bill-input">Enter your bill amount</label>
+          <input id="bill-input" type="number" placeholder="eg: 100" min="0" />
+        </section>
+
+        <section id="tip-percentage-section">
+          <h3>Tip Percentage</h3>
+          <p>Select or adjust tip percentage</p>
+
+          <div id="tip-buttons">
+            <button type="button" data-tip="10">10%</button>
+            <button type="button" data-tip="15">15%</button>
+            <button type="button" data-tip="18">18%</button>
+            <button type="button" data-tip="20">20%</button>
+            <button type="button" data-tip="25">25%</button>
+          </div>
+
+          <label for="range-slider"
+            >Tip Percentage: <span id="range-value">10</span>%</label
+          >
+          <input type="range" min="1" max="50" value="10" id="range-slider" />
+
+          <label for="custom-tip">Custom tip percentage</label>
+          <input
+            id="custom-tip"
+            type="number"
+            placeholder="eg: 12"
+            min="1"
+            max="50"
+          />
+        </section>
+
+        <section id="split-bill-section">
+          <div class="split-bill-heading">
+            <img
+              src="users-solid-full.svg"
+              alt="People icon"
+              id="people-icon"
+            />
+            <h3>Split Bill</h3>
+          </div>
+          <p>How many people are splitting the bill?</p>
+          <label for="num-people-input">Number of people</label>
+          <input
+            id="num-people-input"
+            type="number"
+            placeholder="eg: 3"
+            min="1"
+          />
+        </section>
+
+        <section id="calculate-results-section">
+          <h3>Calculation Results</h3>
+          <div class="amounts-result">
+            <div class="tip-amount-result">
+              <p>Tip Amount <span id="tip-amount" class="amounts">$0.00</span></p>
+            </div>
+            <div class="total-amount-result">
+              <p>Total Amount <span id="total-result" class="amounts">$0.00</span></p>
+            </div>
+          </div>
+          <hr />
+          <div class="split-identifier">
+            <p id="people-displayer">Split between <span id="num-people-display">2</span> people</p>
+          </div>
+          <div class="per-person-amounts-result">
+            <div class="tip-per-person-result">
+              <p>Tip per person <span id="tip-per-person" class="amounts">$0.00</span></p>
+            </div>
+            <div class="total-per-person-result">
+              <p>Total per person <span id="total-per-person" class="amounts">$0.00</span></p>
+            </div>
+          </div>
+        </section>
+
+        <button id="calculate-btn" type="button">Calculate Bill</button>
+        <button type="reset">Reset Calculator</button>
+      </main>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

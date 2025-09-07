@@ -1,0 +1,221 @@
+/* ================== General Styling ========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+h2,
+h3 {
+  color: #164f63;
+  padding: 10px 0;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  margin-top: 8px;
+  border: 2px solid #fff;
+  background: #ecfeff;
+}
+
+section label {
+  color: #164f63;
+  display: block;
+  padding: 10px 0 0 0;
+  font-size: 14px;
+}
+
+/* ================== Slider ========================= */
+#range-slider {
+  padding: 0;
+  margin: 10px 0;
+  outline: none;
+  -webkit-appearance: none;
+  height: 6px;
+  width: 100%;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #164f63 20%, #eee 20%);
+}
+
+#range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid #164f63;
+  background: #fff;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* ================== Container ========================= */
+.container {
+  max-width: 450px;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  text-align: center;
+  padding: 10px;
+}
+
+.heading-line1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading-line1 img {
+  width: 32px;
+  height: 32px;
+}
+
+/* ================== Sections ========================= */
+section {
+  width: 100%;
+  border: 1px solid #164f63;
+  background: #ecfeff;
+  margin: 15px 0;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+#bill-amount-section #dolar-icon {
+  font-size: 24px;
+  display: inline-block;
+}
+
+section p {
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.split-bill-heading{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    /* height: 20px; */
+}
+
+#people-icon{
+    width: 22px;
+    height: 22px;
+    margin-bottom: 2px;
+    /* display: inline-block; */
+}
+
+/* ================== Tip Buttons ========================= */
+#range-value{
+    display: inline-block;
+}
+
+#tip-buttons button {
+  color: #164f63;
+  margin: 5px;
+  padding: 10px 35px;
+  border: 1px solid #164f63;
+  border-radius: 5px;
+  background: #fff;
+}
+
+#tip-buttons button:hover {
+  background: #164f63;
+  color: #fff;
+  cursor: pointer;
+}
+
+#tip-buttons button.active {
+  background: #164f63;
+  color: #fff;
+}
+
+/* ================== Results ========================= */
+#calculate-results-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.amounts-result,
+.per-person-amounts-result {
+  display: flex;
+}
+
+.tip-amount-result,
+.total-amount-result,
+.tip-per-person-result,
+.total-per-person-result {
+  width: 50%;
+}
+
+.amounts {
+  display: block;
+  padding: 10px 0 0 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+  /* text-align: right; */
+}
+
+#tip-amount,
+#tip-per-person {
+  color: #f77411;
+  font-size: 18px;
+}
+
+#total-result,
+#total-per-person {
+  color: #164f63;
+  font-size: 18px;
+}
+
+hr {
+  margin-bottom: 10px;
+}
+
+.split-identifier{
+    height: 25px;
+    min-width: 160px;
+    /* width: 100%; */
+    /* width: auto; */
+    color: #fff;
+    /* padding: 4px 8px; */
+    
+    margin-bottom: 10px;
+    display: none;
+}
+
+.split-identifier p{
+    background: #f77411;
+    color: #fff;
+    border-radius: 8px;
+    padding: 4px 8px;
+    /* display: inline; */
+    display: none;
+}
+
+/* ================== Buttons ========================= */
+button[type="reset"],
+#calculate-btn {
+  padding: 8px;
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid #164f63;
+  border-radius: 5px;
+  color: #164f63;
+  background: #fff;
+}
+
+button[type="reset"]:hover,
+#calculate-btn:hover {
+  background: #164f63;
+  color: #fff;
+  cursor: pointer;
+}
